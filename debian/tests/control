@@ -1,0 +1,13 @@
+Tests:
+ basic
+ dev
+ net
+ upstream
+ userns
+Restrictions: allow-stderr, isolation-machine
+Depends:
+ bubblewrap,
+ iproute2,
+ libipc-run-perl,
+ perl,
+ python,

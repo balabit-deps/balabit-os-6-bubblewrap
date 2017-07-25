@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+pie,+bindnow
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+PKGDIR=$(CURDIR)/debian/bubblewrap
+
+%:
+	dh $@
+
+override_dh_fixperms:
+	chmod a+x $(PKGDIR)/usr/share/bash-completion/completions/bwrap
+	chmod 04755 $(PKGDIR)/usr/bin/bwrap
+	dh_fixperms -Xbin/bwrap
+
+.PHONY: override_dh_fixperms
