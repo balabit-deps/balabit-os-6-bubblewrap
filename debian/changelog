@@ -1,3 +1,9 @@
+bubblewrap (0.1.8-3bb1) unstable; urgency=medium
+
+  * Fix building with debhelper 9 on Ubuntu Xenial.
+
+ -- KOVACS Krisztian <hidden@balabit.com>  Thu, 21 Sep 2017 14:10:54 +0000
+
 bubblewrap (0.1.8-3) unstable; urgency=medium
 
   * Use Perl rather than shell script for the autopkgtest test cases.

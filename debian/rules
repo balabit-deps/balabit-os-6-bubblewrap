@@ -9,7 +9,7 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+pie,+bindnow
 PKGDIR=$(CURDIR)/debian/bubblewrap
 
 %:
-	dh $@
+	dh $@ --parallel --with autoreconf
 
 override_dh_fixperms:
 	chmod a+x $(PKGDIR)/usr/share/bash-completion/completions/bwrap
